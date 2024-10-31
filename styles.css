@@ -1,0 +1,376 @@
+/* Importa a fonte Chakra Petch do Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Estiliza o corpo da página */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #dddddd;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06ddd246-6c9d-43e4-a170-cf8bfa893b62/dgmugr4-dc1e571a-d6a8-47d9-be24-e84efc68c0f2.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzA2ZGRkMjQ2LTZjOWQtNDNlNC1hMTcwLWNmOGJmYTg5M2I2MlwvZGdtdWdyNC1kYzFlNTcxYS1kNmE4LTQ3ZDktYmUyNC1lODRlZmM2OGMwZjIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.4UcUjTM4W9zU92plWGoz65kISUFd5uIDzcXVQQJM-ss");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  margin-top: 20vh;
+  text-align: center;
+  user-select: none;
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  color: #222831;
+  text-shadow: 0px 0px 4px rgb(255, 255, 255);
+}
+
+/* Estiliza as seções da página */
+section {
+  display: flex; /* Usa Flexbox para layout */
+  flex-direction: column; /* Alinha os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  margin-bottom: 2vh; /* Espaçamento abaixo de cada seção */
+}
+
+/* Estiliza os inputs dentro das seções */
+section input {
+  width: 30rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #45474b;
+  border: none;
+  border-radius: 1.5rem;
+  box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+/* Estiliza os botões dentro das seções */
+section button {
+  margin-bottom: 2vh;
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f5f7f8;
+  background-color: #30515e;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+  background-color: #30475e;
+  transform: scale(1.05);
+  transition: 0.15s;
+}
+
+/* Estiliza a caixa de alertas */
+#results {
+  padding: 1vh;
+  font-weight: 600;
+  color: #ff0000;
+  background-color: #ffffff73;
+  border-radius: 80px;
+}
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1vh;
+  width: 90vw;
+  max-width: 60vw;
+  height: auto;
+  /* height: 85vh;  */
+  margin-bottom: 6vh;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  overflow-y: auto;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+  width: 12vw;
+  height: 38vh;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza as imagens dentro dos itens de resultado */
+.item-resultado img {
+  width: 100%;
+  height: auto;
+  background: #dddddd;
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: contain; /* Ajusta a imagem para caber no contêiner */
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.pkm-nome {
+  display: flex;
+  justify-content: space-between;
+  margin: 1vh 0 0 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #222831;
+  cursor: pointer;
+}
+
+.pkm-num {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #7c7e85;
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+  text-decoration: none;
+  color: #30475e;
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+  text-decoration: underline;
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+  color: #45474b;
+  margin: 0.5rem 0;
+}
+
+.tipos {
+  display: flex;
+  font-size: 14px;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.tipo {
+  display: inline-block;
+  margin: 1vh 0 0 0;
+  padding: 2px 6px;
+  font-weight: bold;
+  text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.aço {
+  background-color: #b8b8d0;
+}
+.água {
+  background-color: #6890f0;
+}
+.dragão {
+  background-color: #7038f8;
+}
+.elétrico {
+  background-color: #f8d030;
+}
+.fada {
+  background-color: #f0b6bc;
+}
+.fantasma {
+  background-color: #705898;
+}
+.fogo {
+  background-color: #f08030;
+}
+.gelo {
+  background-color: #98d8d8;
+}
+.inseto {
+  background-color: #a8b820;
+}
+.lutador {
+  background-color: #c03028;
+}
+.normal {
+  background-color: #a8a878;
+}
+.pedra {
+  background-color: #b8a038;
+}
+.planta {
+  background-color: #78c850;
+}
+.psíquico {
+  background-color: #f85888;
+}
+.rocha {
+  background-color: #b8a038;
+}
+.sombrio {
+  background-color: #705848;
+}
+.terrestre {
+  background-color: #e0c068;
+}
+.venenoso {
+  background-color: #a040a0;
+}
+.voador {
+  background-color: #a890f0;
+}
+
+/* Estiliza o modal */
+.modal {
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 0.7);
+  background-size: 100% 100%;
+  border-radius: 5px;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.modal-container {
+  flex-direction: column;
+  width: 30vw;
+  height: 80vh;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, var(--tipo-color) 50%, #ffffff 50%);
+  background-size: 100% 100%;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.modal-tittle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-container img {
+  width: 100%;
+  height: 30vh;
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transform: scale(1.2);
+}
+
+#close-modal {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-container .tipos {
+  font-size: 18px;
+}
+
+#close-modal span:hover{
+  border-radius: 100%;
+  cursor: pointer;
+  transform: scale(1.6);
+  transform: rotate(180deg);
+  transition: 0.5s; 
+}
+
+.pkm-descricao{
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 24%;
+  height: 4vh;
+  padding: 0;
+  font-size: 2vh;
+  color: #ffffff;
+  background-color: #2e2e2eb4;
+  border-top-left-radius: 20px;
+  bottom: 0.5vh;
+  right: 0;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+  }
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  section input {
+    width: 25rem;
+    padding: 0.8rem;
+  }
+
+  .resultados-pesquisa {
+    width: 40rem;
+    height: 40vh;
+  }
+
+  .item-resultado h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 4 colunas */
+  }
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+  }
+
+  section input {
+    width: 17rem;
+  }
+
+  section button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .resultados-pesquisa {
+    width: 90%;
+    height: 50vh;
+  }
+
+  .item-resultado h2 {
+    font-size: 1.1rem;
+  }
+
+  footer {
+    font-size: 0.9rem;
+  }
+}

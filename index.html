@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0&icon_names=close" />  
+
+    <title>PokéLar</title>
+    <link rel="shortcut icon" href="https://cdn.dribbble.com/users/2095576/screenshots/6185566/haunter_sticker_1x.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>PokéLar</h1>
+    </header>
+    <main>
+        <section>
+            <input type="text" placeholder="Digite o nome do Pokémon" id="campo-pesquisa">
+            <button onclick="pesquisar()">Pesquisar</button>
+            <div id="results"></div>
+        </section>
+
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+        </section>
+
+    </main>
+
+    <div  id="modal" class="hidden modal ">
+        <!-- Conteúdo do modal -->
+    </div>
+    
+    <footer>
+        <p>2024 - PokeLar: O lar das informações Pokémon!</p>
+    </footer>
+
+    <script src="dados.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
