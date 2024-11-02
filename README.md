@@ -1,6 +1,6 @@
 # PokeLar
 
-PokéLar é um projeto web que oferece uma interface interativa para pesquisar informações sobre diferentes Pokémon. O site permite que os usuários busquem Pokémon pelo nome, tipo ou número, e exibe os detalhes de cada um em uma interface clara e intuitiva. O projeto utiliza HTML, CSS e JavaScript para o frontend.
+PokéLar é um projeto web que oferece uma interface interativa para pesquisar informações sobre diferentes Pokémon. O site permite que os usuários busquem Pokémon pelo nome, tipo ou número, e exibe os detalhes de cada um em uma interface clara e intuitiva.
 
 ## Funcionalidades
 - **Pesquisa por Nome, Tipo ou Número:** Os usuários podem buscar Pokémon digitando o nome, tipo ou número no campo de pesquisa.
