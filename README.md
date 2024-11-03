@@ -14,3 +14,8 @@ PokéLar é um projeto web que oferece uma interface interativa para pesquisar i
 
 ## Exemplo de Uso
 Digite "Pikachu" no campo de pesquisa e clique no botão "Pesquisar". Uma miniatura de Pikachu aparecerá nos resultados. Clique nela para abrir o modal com os detalhes completos.
+
+## Imagens
+![MainPage](imagens/MainPage.PNG)
+![Pesquisa](imagens/Pesquisa.PNG)
+![Modal](imagens/Modal.PNG)
