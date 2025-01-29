@@ -1,0 +1,84 @@
+/* Responsividade para telas menores */
+@media screen and (max-width: 1024px) {
+  h1 {
+    background-color: red;
+  }
+
+  .resultados-pesquisa {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modal-container {
+    width: 80vw;
+    height: auto;
+  }
+
+  footer {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    background-color: yellow;
+  }
+
+  section input {
+    width: 24rem;
+  }
+
+  .resultados-pesquisa {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    width: 60%;
+    font-size: 1.5vh;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    background-color: green;
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+  }
+
+  section input {
+    width: 20rem;
+  }
+
+  /* section button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  } */
+
+  .item-resultado {
+    width: 123px;
+    margin-bottom: 0.4rem;
+  }
+
+  .tipo {
+    font-size: 10px;
+  }
+
+  .pkm-nome {
+    font-size: 1.2rem;
+    margin: 0.6vh 0 0 0;
+  }
+
+  .modal-container {
+    width: 95vw;
+    height: auto;
+    padding: 15px;
+  }
+
+  .pkm-descricao {
+    font-size: 1rem;
+  }
+
+  footer {
+    width: 80%;
+  }
+}

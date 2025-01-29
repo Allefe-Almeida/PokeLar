@@ -13,21 +13,23 @@
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: #dddddd;
   background-image: url(imagens/bgb.jpg);
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
 }
 
 header {
-  margin-top: 20vh;
   text-align: center;
   user-select: none;
+  margin-top: 10vh;
 }
 
 /* Estiliza os títulos h1 */
@@ -41,10 +43,10 @@ h1 {
 
 /* Estiliza as seções da página */
 section {
-  display: flex; /* Usa Flexbox para layout */
-  flex-direction: column; /* Alinha os itens na vertical */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  margin-bottom: 2vh; /* Espaçamento abaixo de cada seção */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 2vh; 
 }
 
 /* Estiliza os inputs dentro das seções */
@@ -94,8 +96,7 @@ section button:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1vh;
-  width: 90vw;
-  max-width: 60vw;
+  max-width: 80vw;
   height: auto;
   /* height: 85vh;  */
   margin-bottom: 6vh;
@@ -106,8 +107,8 @@ section button:hover {
 
 /* Estiliza cada item de resultado */
 .item-resultado {
-  width: 12vw;
-  height: 38vh;
+  width: 150px;
+  /* height: 38vh; */
   margin-bottom: 1rem;
   padding: 1rem;
   background: #ffffff;
@@ -162,7 +163,7 @@ section button:hover {
 
 .tipos {
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   gap: 5px;
   flex-wrap: wrap;
 }
@@ -255,7 +256,11 @@ section button:hover {
   width: 30vw;
   height: 80vh;
   background-color: #fff;
-  background-image: linear-gradient(to bottom, var(--tipo-color) 50%, #ffffff 50%);
+  background-image: linear-gradient(
+    to bottom,
+    var(--tipo-color) 50%,
+    #ffffff 50%
+  );
   background-size: 100% 100%;
   border-radius: 5px;
   padding: 10px 20px;
@@ -286,15 +291,15 @@ section button:hover {
   font-size: 18px;
 }
 
-#close-modal span:hover{
+#close-modal span:hover {
   border-radius: 100%;
   cursor: pointer;
   transform: scale(1.6);
   transform: rotate(180deg);
-  transition: 0.5s; 
+  transition: 0.5s;
 }
 
-.pkm-descricao{
+.pkm-descricao {
   font-size: 1.2rem;
   margin-bottom: 0;
 }
@@ -315,62 +320,4 @@ footer {
   bottom: 0.5vh;
   right: 0;
   z-index: 20;
-}
-
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
-  }
-
-  h1 {
-    font-size: 2rem;
-    letter-spacing: 0.2rem;
-  }
-
-  section input {
-    width: 25rem;
-    padding: 0.8rem;
-  }
-
-  .resultados-pesquisa {
-    width: 40rem;
-    height: 40vh;
-  }
-
-  .item-resultado h2 {
-    font-size: 1.3rem;
-  }
-}
-
-/* Responsividade para celulares */
-@media (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr); /* 4 colunas */
-  }
-  h1 {
-    font-size: 1.8rem;
-    letter-spacing: 0.1rem;
-  }
-
-  section input {
-    width: 17rem;
-  }
-
-  section button {
-    padding: 0.6rem 1rem;
-    font-size: 0.9rem;
-  }
-
-  .resultados-pesquisa {
-    width: 90%;
-    height: 50vh;
-  }
-
-  .item-resultado h2 {
-    font-size: 1.1rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
 }
