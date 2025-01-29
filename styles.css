@@ -96,19 +96,14 @@ section button:hover {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 1vh;
-  max-width: 80vw;
+  max-width: 90vw;
   height: auto;
-  /* height: 85vh;  */
-  margin-bottom: 6vh;
-  padding: 1rem;
-  border-radius: 0.6rem;
   overflow-y: auto;
 }
 
 /* Estiliza cada item de resultado */
 .item-resultado {
   width: 150px;
-  /* height: 38vh; */
   margin-bottom: 1rem;
   padding: 1rem;
   background: #ffffff;
@@ -253,8 +248,9 @@ section button:hover {
 
 .modal-container {
   flex-direction: column;
-  width: 30vw;
-  height: 80vh;
+  max-width: 400px;
+  width: 80vw;
+  height: auto;
   background-color: #fff;
   background-image: linear-gradient(
     to bottom,
@@ -310,7 +306,7 @@ footer {
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 24%;
+  width: 48vh;
   height: 4vh;
   padding: 0;
   font-size: 2vh;
