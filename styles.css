@@ -90,6 +90,9 @@ section button:hover {
   background-color: #ffffff73;
   border-radius: 80px;
 }
+#results:empty {
+  display: none;
+}
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
